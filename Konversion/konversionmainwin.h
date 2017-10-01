@@ -15,6 +15,9 @@ public:
     explicit KonversionMainWin(QWidget *parent = 0);
     ~KonversionMainWin();
 
+    double dimSaisie = 0, echelleSaisie = 0, resultatConversion = -1;
+    QString uniteFrom = "", uniteTo = "";
+
 private slots:
     void on_pushButton_pressed();
 
