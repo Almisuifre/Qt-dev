@@ -16,14 +16,6 @@ KonversionMainWin::~KonversionMainWin()
 
 void KonversionMainWin::on_pushButton_pressed()
 {
-    //qDebug() << QString(ui->Echelle->currentText());
-    //qDebug() << ui->Echelle->currentIndex();
-    //qDebug() << QString(ech[ui->Echelle->currentIndex()]);
-    //qDebug() << ui->valueStart->value();
-    //qDebug() << ui->valueEnd->value();
-    //int valeurConvertie = formule_echelle(ui->valueStart->value(), ui->Echelle->currentIndex(), ui->UniteEchelleStart->currentIndex(), ui->UnieEchelleEnd->currentIndex());
-    //ui->Log->setText("1 mètre au 1/10 donne "+valeurConvertie+" millimètres \n");
-
     formule_echelle(ui->valueStart->value(), ui->Echelle->currentIndex(), ui->UniteEchelleStart->currentIndex(), ui->UnieEchelleEnd->currentIndex());
 
     if(resultatConversion != -1)
