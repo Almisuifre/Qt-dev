@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>717</width>
-    <height>334</height>
+    <height>250</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -26,7 +26,7 @@
     <property name="title">
      <string>Convertir</string>
     </property>
-    <widget class="QComboBox" name="comboBox">
+    <widget class="QComboBox" name="UniteEchelle1">
      <property name="geometry">
       <rect>
        <x>160</x>
@@ -51,7 +51,7 @@
       </property>
      </item>
     </widget>
-    <widget class="QComboBox" name="comboBox_2">
+    <widget class="QComboBox" name="UnieEchelleDestination">
      <property name="geometry">
       <rect>
        <x>160</x>
@@ -60,6 +60,21 @@
        <height>22</height>
       </rect>
      </property>
+     <item>
+      <property name="text">
+       <string>Millimètres</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Centimètres</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Mètres</string>
+      </property>
+     </item>
     </widget>
     <widget class="QDoubleSpinBox" name="doubleSpinBox">
      <property name="geometry">
@@ -81,7 +96,7 @@
       </rect>
      </property>
     </widget>
-    <widget class="QComboBox" name="comboBox_3">
+    <widget class="QComboBox" name="Echelle">
      <property name="geometry">
       <rect>
        <x>10</x>
@@ -155,64 +170,25 @@
      </property>
     </widget>
    </widget>
-   <widget class="QGroupBox" name="groupBox_2">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>200</y>
-      <width>271</width>
-      <height>71</height>
-     </rect>
-    </property>
-    <property name="title">
-     <string>Modes</string>
-    </property>
-    <widget class="QRadioButton" name="radioButton">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>20</y>
-       <width>82</width>
-       <height>17</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Automatique</string>
-     </property>
-    </widget>
-    <widget class="QRadioButton" name="radioButton_2">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>40</y>
-       <width>82</width>
-       <height>17</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Manuel</string>
-     </property>
-    </widget>
-   </widget>
    <widget class="QGroupBox" name="groupBox_3">
     <property name="geometry">
      <rect>
       <x>290</x>
       <y>0</y>
       <width>421</width>
-      <height>281</height>
+      <height>191</height>
      </rect>
     </property>
     <property name="title">
      <string>Log</string>
     </property>
-    <widget class="QPlainTextEdit" name="plainTextEdit">
+    <widget class="QPlainTextEdit" name="Log">
      <property name="geometry">
       <rect>
        <x>10</x>
        <y>20</y>
        <width>401</width>
-       <height>251</height>
+       <height>161</height>
       </rect>
      </property>
      <property name="palette">
@@ -645,8 +621,7 @@
       <enum>Qt::ScrollBarAlwaysOn</enum>
      </property>
      <property name="plainText">
-      <string>Test
-</string>
+      <string/>
      </property>
     </widget>
    </widget>

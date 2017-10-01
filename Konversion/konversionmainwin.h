@@ -15,8 +15,13 @@ public:
     explicit KonversionMainWin(QWidget *parent = 0);
     ~KonversionMainWin();
 
+private slots:
+    void on_pushButton_pressed();
+
 private:
     Ui::KonversionMainWin *ui;
+    void formule_echelle();
+
 };
 
 #endif // KONVERSIONMAINWIN_H
