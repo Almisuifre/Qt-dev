@@ -1,0 +1,13 @@
+<?xml version = "1.0" encoding="UTF-8" standalone="yes" ?>
+<saved>
+    <webstation>
+        <nom>France Inter</nom>
+        <url>http://direct.franceinter.fr/live/franceinter-midfi.mp3</url>
+        <started>no</started>
+    <webstation>
+    <webstation>
+        <nom>Virgin Radio</nom>
+        <url>http://vr-live-mp3-128.scdn.arkena.com/virginradio.mp3</url>
+        <started>yes</started>
+    <webstation>
+</saved>
