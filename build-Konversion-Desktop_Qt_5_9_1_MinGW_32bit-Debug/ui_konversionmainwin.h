@@ -69,6 +69,7 @@ public:
         valueEnd->setObjectName(QStringLiteral("valueEnd"));
         valueEnd->setGeometry(QRect(10, 90, 141, 22));
         valueEnd->setDecimals(3);
+        valueEnd->setMaximum(1e+6);
         Echelle = new QComboBox(groupBox);
         Echelle->setObjectName(QStringLiteral("Echelle"));
         Echelle->setGeometry(QRect(10, 20, 251, 22));

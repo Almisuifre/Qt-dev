@@ -28,7 +28,8 @@ void KonversionMainWin::on_pushButton_pressed()
 
     if(resultatConversion != -1)
     {
-        ui->Log->setText("Résultat pour l'éhelle 1/" +echelleSaisie+ " :" +dimSaisie+ " " +uniteFrom+ " -> " +resultatConversion+ " " +uniteTo+ ".\n");
+        ui->valueEnd->setValue(resultatConversion);
+        ui->Log->append("Résultat pour l'éhelle 1/" +QString::number(echelleSaisie, 'f', 4)+ " : " +QString::number(dimSaisie, 'f', 2)+ " " +uniteFrom+ " -> " +QString::number(resultatConversion, 'f', 3)+ " " +uniteTo+ ".");
     }
 }
 

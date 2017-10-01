@@ -104,6 +104,9 @@
      <property name="decimals">
       <number>3</number>
      </property>
+     <property name="maximum">
+      <double>1000000.000000000000000</double>
+     </property>
     </widget>
     <widget class="QComboBox" name="Echelle">
      <property name="geometry">
