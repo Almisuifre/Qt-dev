@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>501</width>
-    <height>205</height>
+    <width>649</width>
+    <height>378</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -21,60 +21,6 @@
        <string>Convertir</string>
       </property>
       <layout class="QGridLayout" name="gridLayout">
-       <item row="0" column="0" colspan="2">
-        <widget class="QComboBox" name="Echelle">
-         <item>
-          <property name="text">
-           <string>Echelle O British 1/43,5</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Echelle HO 1/87,0857</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Echelle O 1/48</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Echelle OO 1/76</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Echelle OO 1/80,5</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Echelle G - Bachmann 1/20,3</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Echelle G - LGB 1/22,5</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Echelle 1/10</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Echelle 1/30</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Echelle 1/100</string>
-          </property>
-         </item>
-        </widget>
-       </item>
        <item row="1" column="0">
         <widget class="QDoubleSpinBox" name="valueStart">
          <property name="decimals">
@@ -84,6 +30,9 @@
           <double>1.000000000000000</double>
          </property>
         </widget>
+       </item>
+       <item row="0" column="0" colspan="2">
+        <widget class="QComboBox" name="Echelle"/>
        </item>
        <item row="1" column="1">
         <widget class="QComboBox" name="UniteEchelleStart">
@@ -102,6 +51,13 @@
            <string>Millimètres</string>
           </property>
          </item>
+        </widget>
+       </item>
+       <item row="3" column="0" colspan="2">
+        <widget class="QPushButton" name="pushButton">
+         <property name="text">
+          <string>Conversion</string>
+         </property>
         </widget>
        </item>
        <item row="2" column="0">
@@ -133,12 +89,18 @@
          </item>
         </widget>
        </item>
-       <item row="3" column="0" colspan="2">
-        <widget class="QPushButton" name="pushButton">
-         <property name="text">
-          <string>Conversion</string>
+       <item row="4" column="0" colspan="2">
+        <spacer name="verticalSpacer">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
          </property>
-        </widget>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
        </item>
       </layout>
      </widget>
@@ -287,8 +249,6 @@
         </widget>
        </item>
       </layout>
-      <zorder>Log</zorder>
-      <zorder>groupBox</zorder>
      </widget>
     </item>
    </layout>
@@ -298,7 +258,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>501</width>
+     <width>649</width>
      <height>21</height>
     </rect>
    </property>

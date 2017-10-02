@@ -22,6 +22,7 @@
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
+#include <QtWidgets/QSpacerItem>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QTextEdit>
 #include <QtWidgets/QToolBar>
@@ -36,12 +37,13 @@ public:
     QHBoxLayout *horizontalLayout;
     QGroupBox *groupBox;
     QGridLayout *gridLayout;
-    QComboBox *Echelle;
     QDoubleSpinBox *valueStart;
+    QComboBox *Echelle;
     QComboBox *UniteEchelleStart;
+    QPushButton *pushButton;
     QDoubleSpinBox *valueEnd;
     QComboBox *UnieEchelleEnd;
-    QPushButton *pushButton;
+    QSpacerItem *verticalSpacer;
     QGroupBox *groupBox_3;
     QGridLayout *gridLayout_2;
     QTextEdit *Log;
@@ -53,7 +55,7 @@ public:
     {
         if (KonversionMainWin->objectName().isEmpty())
             KonversionMainWin->setObjectName(QStringLiteral("KonversionMainWin"));
-        KonversionMainWin->resize(501, 205);
+        KonversionMainWin->resize(649, 378);
         centralWidget = new QWidget(KonversionMainWin);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
         horizontalLayout = new QHBoxLayout(centralWidget);
@@ -66,11 +68,6 @@ public:
         gridLayout->setSpacing(6);
         gridLayout->setContentsMargins(11, 11, 11, 11);
         gridLayout->setObjectName(QStringLiteral("gridLayout"));
-        Echelle = new QComboBox(groupBox);
-        Echelle->setObjectName(QStringLiteral("Echelle"));
-
-        gridLayout->addWidget(Echelle, 0, 0, 1, 2);
-
         valueStart = new QDoubleSpinBox(groupBox);
         valueStart->setObjectName(QStringLiteral("valueStart"));
         valueStart->setDecimals(2);
@@ -78,10 +75,20 @@ public:
 
         gridLayout->addWidget(valueStart, 1, 0, 1, 1);
 
+        Echelle = new QComboBox(groupBox);
+        Echelle->setObjectName(QStringLiteral("Echelle"));
+
+        gridLayout->addWidget(Echelle, 0, 0, 1, 2);
+
         UniteEchelleStart = new QComboBox(groupBox);
         UniteEchelleStart->setObjectName(QStringLiteral("UniteEchelleStart"));
 
         gridLayout->addWidget(UniteEchelleStart, 1, 1, 1, 1);
+
+        pushButton = new QPushButton(groupBox);
+        pushButton->setObjectName(QStringLiteral("pushButton"));
+
+        gridLayout->addWidget(pushButton, 3, 0, 1, 2);
 
         valueEnd = new QDoubleSpinBox(groupBox);
         valueEnd->setObjectName(QStringLiteral("valueEnd"));
@@ -95,10 +102,9 @@ public:
 
         gridLayout->addWidget(UnieEchelleEnd, 2, 1, 1, 1);
 
-        pushButton = new QPushButton(groupBox);
-        pushButton->setObjectName(QStringLiteral("pushButton"));
+        verticalSpacer = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
 
-        gridLayout->addWidget(pushButton, 3, 0, 1, 2);
+        gridLayout->addItem(verticalSpacer, 4, 0, 1, 2);
 
 
         horizontalLayout->addWidget(groupBox);
@@ -143,15 +149,13 @@ public:
 
         gridLayout_2->addWidget(Log, 0, 0, 1, 1);
 
-        Log->raise();
-        groupBox->raise();
 
         horizontalLayout->addWidget(groupBox_3);
 
         KonversionMainWin->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(KonversionMainWin);
         menuBar->setObjectName(QStringLiteral("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 501, 21));
+        menuBar->setGeometry(QRect(0, 0, 649, 21));
         KonversionMainWin->setMenuBar(menuBar);
         mainToolBar = new QToolBar(KonversionMainWin);
         mainToolBar->setObjectName(QStringLiteral("mainToolBar"));
@@ -169,32 +173,19 @@ public:
     {
         KonversionMainWin->setWindowTitle(QApplication::translate("KonversionMainWin", "KonversionMainWin", Q_NULLPTR));
         groupBox->setTitle(QApplication::translate("KonversionMainWin", "Convertir", Q_NULLPTR));
-        Echelle->clear();
-        Echelle->insertItems(0, QStringList()
-         << QApplication::translate("KonversionMainWin", "Echelle O British 1/43,5", Q_NULLPTR)
-         << QApplication::translate("KonversionMainWin", "Echelle HO 1/87,0857", Q_NULLPTR)
-         << QApplication::translate("KonversionMainWin", "Echelle O 1/48", Q_NULLPTR)
-         << QApplication::translate("KonversionMainWin", "Echelle OO 1/76", Q_NULLPTR)
-         << QApplication::translate("KonversionMainWin", "Echelle OO 1/80,5", Q_NULLPTR)
-         << QApplication::translate("KonversionMainWin", "Echelle G - Bachmann 1/20,3", Q_NULLPTR)
-         << QApplication::translate("KonversionMainWin", "Echelle G - LGB 1/22,5", Q_NULLPTR)
-         << QApplication::translate("KonversionMainWin", "Echelle 1/10", Q_NULLPTR)
-         << QApplication::translate("KonversionMainWin", "Echelle 1/30", Q_NULLPTR)
-         << QApplication::translate("KonversionMainWin", "Echelle 1/100", Q_NULLPTR)
-        );
         UniteEchelleStart->clear();
         UniteEchelleStart->insertItems(0, QStringList()
          << QApplication::translate("KonversionMainWin", "M\303\250tres", Q_NULLPTR)
          << QApplication::translate("KonversionMainWin", "Centim\303\250tres", Q_NULLPTR)
          << QApplication::translate("KonversionMainWin", "Millim\303\250tres", Q_NULLPTR)
         );
+        pushButton->setText(QApplication::translate("KonversionMainWin", "Conversion", Q_NULLPTR));
         UnieEchelleEnd->clear();
         UnieEchelleEnd->insertItems(0, QStringList()
          << QApplication::translate("KonversionMainWin", "Millim\303\250tres", Q_NULLPTR)
          << QApplication::translate("KonversionMainWin", "Centim\303\250tres", Q_NULLPTR)
          << QApplication::translate("KonversionMainWin", "M\303\250tres", Q_NULLPTR)
         );
-        pushButton->setText(QApplication::translate("KonversionMainWin", "Conversion", Q_NULLPTR));
         groupBox_3->setTitle(QApplication::translate("KonversionMainWin", "Log", Q_NULLPTR));
     } // retranslateUi
 
