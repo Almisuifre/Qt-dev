@@ -15,15 +15,15 @@ public:
     explicit KonversionMainWin(QWidget *parent = 0);
     ~KonversionMainWin();
 
-    double dimSaisie = 0, echelleSaisie = 0, resultatConversion = -1;
-    QString uniteFrom = "", uniteTo = "";
-
 private slots:
     void on_pushButton_pressed();
 
 private:
     Ui::KonversionMainWin *ui;
     void formule_echelle(double dimension, double echelle, int uniteDepart, int uniteFin);
+
+    double dimSaisie = 0, echelleSaisie = 0, resultatConversion = -1;
+    QString uniteFrom = "", uniteTo = "";
 };
 
 #endif // KONVERSIONMAINWIN_H

@@ -9,6 +9,7 @@ KonversionMainWin::KonversionMainWin(QWidget *parent) :
     ui->setupUi(this);
 
     QMap<QString, double> Map;
+
     Map.insert("Echelle 1/35 - Voie de 60 - Utilise de la voie Ho 16.5mm", 35);
     Map.insert("Echelle O 1/43,5 - British", 43.5);
     Map.insert("Echelle HO 1/87,0857", 87.0857);
@@ -21,11 +22,12 @@ KonversionMainWin::KonversionMainWin(QWidget *parent) :
     Map.insert("Echelle 1/30 - Trentième", 30);
     Map.insert("Echelle 1/100 - Centième", 100);
 
-    QString Text;
-    foreach(Text, Map.keys())
+    QMap<QString, double>::iterator iter; //Itérator en fonction de Map
+    for(iter = Map.begin(); iter != Map.end(); ++iter) //Parcourir la map
     {
-        ui->Echelle->addItem(Text, QVariant(Map[Text]));
+        ui->Echelle->addItem(iter.key(), QVariant(iter.value())); //Récupérer les infos
     }
+
 }
 
 KonversionMainWin::~KonversionMainWin()
