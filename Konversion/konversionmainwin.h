@@ -23,8 +23,7 @@ private slots:
 
 private:
     Ui::KonversionMainWin *ui;
-    int formule_echelle(double dimension, double echelle, int uniteDepart, int uniteFin);
-
+    void formule_echelle(double dimension, double echelle, int uniteDepart, int uniteFin);
 };
 
 #endif // KONVERSIONMAINWIN_H
